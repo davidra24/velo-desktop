@@ -27,7 +27,7 @@ public class RecordCategories {
     public RecordCategories(int id, String name) {
         this.id = id;
         this.name = name;
-        this.sub_cat = new Integer(null);
+        this.sub_cat = new Integer("");
         dataBaseConnect = new DataBaseConnect();
     }
     
