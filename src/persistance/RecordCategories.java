@@ -32,19 +32,8 @@ public class RecordCategories {
     }
     
     public void insert(){
-        try {
-            ResultSet rs = dataBaseConnect.sendSentence("select id from categories where id="+id);
-            while (rs.next()) {
-                if (rs.getInt(1)!=id || Objects.isNull(rs.getInt(1))){
-                    dataBaseConnect.sendSentence("insert into categories values ("+id+", '"+name+"' ,"+sub_cat+")");
-                    dataBaseConnect.commit();
-                }else{
-                    System.err.println("Dato ya existente en el sistema");        
-                }
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(RecordCategories.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        dataBaseConnect.sendSentence("insert into categories values ("+id+", '"+name+"' ,"+sub_cat+")");
+        dataBaseConnect.commit();
     }
     
     public boolean delete(int id){
