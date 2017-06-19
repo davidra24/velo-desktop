@@ -27,7 +27,7 @@ public class RecordCategories {
     public RecordCategories(int id, String name) {
         this.id = id;
         this.name = name;
-        this.sub_cat = 0;
+        this.sub_cat = new Integer(null);
         dataBaseConnect = new DataBaseConnect();
     }
     
@@ -37,7 +37,7 @@ public class RecordCategories {
     }
     
     public boolean delete(int id){
-        ResultSet rs = dataBaseConnect.sendSentence("delete * from categories where id="+id+"");
+        ResultSet rs = dataBaseConnect.sendSentence("delete from categories where id="+id+"");
         return true;
     }
     
