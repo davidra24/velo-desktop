@@ -14,9 +14,9 @@ public class TestDatabase {
      */
     public static void main(String[] args) {
         //DataBaseConnect dataBaseConnect = new DataBaseConnect();
-        RecordCategories recordCategories = new RecordCategories(0, "prueba1");
+        RecordCategories recordCategories = new RecordCategories(1, "prueba1");
         recordCategories.insert();
-        recordCategories = new RecordCategories(1, "prueba2",0);
+        recordCategories = new RecordCategories(2, "prueba2",1);
         recordCategories.insert();
         
     }
